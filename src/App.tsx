@@ -20,22 +20,14 @@ function App() {
   return (
     <div className="App">
       <h1>Movies!</h1>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div>
         {movies.map((m) => {
           return (
-            <div
-              key={m.name}
-              style={{
-                border: "1px solid black",
-                margin: "8px 8px",
-                minWidth: 200,
-                flex: 0,
-              }}
-            >
+            <div key={m.name}>
               <h2>{m.name}</h2>
               <p>release date: {m.release_date}</p>
               <p>category: {m.category}</p>
-              <img src={m.img} style={{ width: "50%" }} />
+              <img src={m.img} style={{ width: "20%" }} />
             </div>
           );
         })}
